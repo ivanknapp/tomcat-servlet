@@ -7,14 +7,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import ru.knapp.service.MyService;
 
 import java.io.IOException;
 
 @WebServlet("/spring")
-@Service
 public class MySpringServlet extends HttpServlet {
     private MyService myService;
 
