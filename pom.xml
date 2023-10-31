@@ -10,12 +10,36 @@
 
     <name>Archetype - my-webapp</name>
 
+    <properties>
+        <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
+        <org.springframework.version>6.0.13</org.springframework.version>
+        <org.yaml.snakeyaml.version>2.2</org.yaml.snakeyaml.version>
+    </properties>
+
     <dependencies>
+
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${org.yaml.snakeyaml.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
+            <version>${jakarta.servlet-api.version}</version>
             <scope>provided</scope>
         </dependency>
 

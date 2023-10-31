@@ -1,0 +1,3 @@
+my-webapp:
+  myService:
+    val: "my-test-val"
