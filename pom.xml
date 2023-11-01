@@ -12,8 +12,13 @@
 
     <properties>
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
-        <org.springframework.version>6.0.13</org.springframework.version>
+        <javax.servlet-api.version>2.5</javax.servlet-api.version>
+        <!--        <org.springframework.version>6.0.13</org.springframework.version>-->
+        <org.springframework.version>5.3.30</org.springframework.version>
         <org.yaml.snakeyaml.version>2.2</org.yaml.snakeyaml.version>
+        <aspectj.version>1.9.20.1</aspectj.version>
+        <springfox-swagger2.version>2.4.0</springfox-swagger2.version>
+        <com.fasterxml.jackson.core.version>2.15.3</com.fasterxml.jackson.core.version>
     </properties>
 
     <dependencies>
@@ -37,10 +42,59 @@
         </dependency>
 
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>${jakarta.servlet-api.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>jakarta.servlet</groupId>-->
+        <!--            <artifactId>jakarta.servlet-api</artifactId>-->
+        <!--            <version>${jakarta.servlet-api.version}</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.core.version}</version>
         </dependency>
 
     </dependencies>

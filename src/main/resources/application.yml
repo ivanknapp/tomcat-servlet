@@ -1,3 +1,5 @@
 my-webapp:
   myService:
     val: "my-test-val"
+  MyServiceForAspect:
+    val: "my-test-aspect-val"

@@ -4,12 +4,15 @@ package ru.knapp.config;
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import ru.knapp.service.MyService;
 
 @Configuration
-public class AppConfig {
+@EnableAspectJAutoProxy
+public class AppConfig implements WebMvcConfigurer {
 
     @Bean
     public MyService myService() {
